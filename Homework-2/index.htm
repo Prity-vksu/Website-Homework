@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peak District National Park</title>
+</head>
+   <!--css-->
+<style>
+    /*global*/
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }   
+    
+    #title{
+        background-image: url('background_3.jpg')  ;
+        background-size:100%;
+        background-position: center center;  
+     
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 35px;
+        height: 600px;
+        background-repeat: no-repeat;
+    } 
+    
+    .navbar_ul{
+        list-style: none;
+        padding-left: 30px;
+    }
+    .navbar_li{
+        display: inline;
+    }
+    .navbar_a{
+        color: aliceblue;
+    }
+
+    /*class*/
+    .container{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        padding-top: 35px;
+        justify-content: space-between;
+    }
+
+    .v_container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        padding-top: 55px;
+        justify-content: center; 
+    }
+        
+     
+    #summary_text{
+        width: 50%;
+        text-align: left;
+        
+    } 
+
+    #summary_img{
+        width: 50%;
+        text-align: right;
+    }
+    
+
+    #key_title h2{
+        font-size: 35px;
+
+    }
+
+    #key_activities{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }   
+
+    #key_1{
+        width: 30%;
+        
+
+    }
+    #key_1 img{
+        width: 400px;
+        height: 200px;
+        background-color: blueviolet;
+    }
+
+    #key_2{
+        width: 30%;
+    }
+    #key_2 img{
+
+         width: 400px;
+        height: 200px;
+    }
+
+    #key_3{
+        width: 30%;
+    }
+    #key_3 img{     
+        width: 400px;
+        height: 200px;
+    }
+
+    #description_text{
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        
+    }
+    #description_img img {
+        width: 1200px;
+    }
+
+    #Getting-there-img {
+        width: 50%;
+    }
+    
+    #Getting-there-text {
+        width: 50%;
+        margin-top: 35px;
+    }
+    
+    #Getting-there-alternatives-text{
+        width: 50%;
+        margin-top: 35px;
+    }
+
+    #Getting-there-alternatives-img{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+        
+    #footer {
+            background-color: #008000;
+            text-align: center;
+            font-size: 15px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        #footertext {
+            margin: 0%;
+        }    
+
+</style>
+
+<body>
+    <div id="title">
+        <h1>Peak District <br>National Park</h1>
+        <ul class="navbar_ul">
+            <li class="navbar_li"> 
+                <a class="navbar_a" href="https://www.nationalparks.uk/" target="_blank">Home</a> | </li>
+            <li class="navbar_li"> 
+                <a class="navbar_a" href="https://www.nationalparks.uk/parks/" target="_blank">Your National Park</a> | </li>
+            <li class="navbar_li">
+                 <a class="navbar_a" href="https://www.nationalparks.uk/green-space-dark-skies/" target="_blank">Green Space</a> </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <section id="summary_text">
+            <h1><i>A land of two halves</i></h1>
+            <h4>Immerse yourself in exploring famous hills, dramatic rock edges
+                beside wild moorlands and tranquil dales all in one day.
+            </h4>
+            <p> At more than 550 squares miles and the UK's original national park, the Peak District 
+                provides a taste of the outdoors to millions. Considered by many as the spiritual home of 
+                the free access to the countryside we all enjoy today, the Peak District continues to provide
+                a warm welcome to those seeking some of their first inspirational connections with nature.
+            </p>    
+        </section>
+
+        <section id="summary_img">
+            <img src="pdnpa-map.jpg" width="200px">
+        </section>  
+    </div>
+    
+    <div class="container" id="key_title">
+        <h2>Key activities</h2>
+    </div>
+
+    <div class="container">
+            
+            <section id="key_1">
+                <img src="key_activity1.jpg">
+                <h3>Be a trail blazer</h3>
+                <p>With over 35 miles of traffic-free level, easy access and all-user 
+                    trails, let us take you into the heart of the national park.
+                </p>
+            </section>
+
+            <section id="key_2">
+                <img src= "key_activity2.jpg">
+                <h3>On your bike</h3>
+                <p>With your own wheels or from several bike hire centres amongst
+                   stunning scenery, there's no better way to explore.
+                </p>      
+            </section>
+
+            <section id="key_3">
+                <img src= "key_activity3.jpg">
+                 <h3>It's a cave, man </h3>
+                 <p>Get a different perspective on the Peak District by heading below
+                    the famous summits to discover a whole new underground world.
+                 </p>
+            </section>
+
+    </div>
+
+    <div class="v_container">
+
+        <section id="description_text">
+            <h2>A place for pioneers</h2>
+            <h4>As the UK's original national park, our past stretches back almost a century - far beyond our nearly 70 years since
+             designation.</h4>
+             <p>  Our uplands played host to the ' mass trespass' events of the 1930s, whose pioneering spirit would go on to set the
+                  foundations for our protected landscapes and the public access we all enjoy today. Through devastating wild fires,
+                  history-making changes to our transport network that saw bustling steam railways fall silent, to war time secrecy as 
+                  home to the Dambusters training sorties, the Peak District has often been at the heart of change in our culture and
+                  communities. Fast forward generations and today we welcome visitors from all corners of the globe and all walks of
+                  life. Our all-access trails bring a nationally-renowned outdoors experience to thousands - wherever you set your limits-
+                  and our climbing and cycling offer is good enough for our finest medal-winning athletes. With over 38,000 residents,
+                  community spirit remains at our heart - whether you want a taste of the Peak District, are ready to immerse yourself in 
+                  our annual festivals or want to explore your creativity there's always something around the corner. If you're ready to re-
+                  connect with nature, then the Peak District is ready with a warm welcome.
+            </p>    
+        </section>
+
+        <section id="description_img">
+            <img src="MwS-Parsley-Hay_c_Tom-Marshall-6-1920x1080.jpg">
+        </section>
+
+    </div>
+
+    <div class="container">
+
+        <section id="Getting-there-img">
+            <img src="Roaches-PDNP-580x580.jpg">
+        </section>
+
+        <section id="Getting-there-text">
+            <h2>Getting there</h2>
+            <p>  Trains from nearby cities of Sheffield and Manchester run into the heart of 
+                 the Hope Valley (for Castleton, caves and the Pennine Way) and to Buxton just outside 
+                 the national park boundary, but close to many popular areas. Buses travel into and throughout
+                 the Peak District from other nearby towns and cities including Nottingham and Derby, Macclesfield 
+                 and Chesterfield. The Hope Valley Explorer is a seasonal bus service run in partnership with the
+                 National Park Authority, and usually operates from Easter and throughout the summer holidays
+                 (sorry, no service currently due to Covid-19 restrictions).</p>
+        </section>
+
+    </div>
+
+    <div class="container">
+
+        <section id="Getting-there-alternatives-text">
+            <h2> Getting there alternatives</h2>
+            <p>  As well as the above rail and bus services, international airports at East Midlands
+             and Manchester are less than an hour's travel to the national park,
+             with locations such as Birmingham, Liverpool, Leeds and Doncaster
+             Robin Hood airports just a little further.</p>
+        </section>  
+        
+        <section id="Getting-there-alternatives-img">
+            <img src="North-Lees-campsite-580x580.jpg" >     
+        </section>
+
+    </div>
+
+    <div id="footer">
+        <ul class="navbar_ul">
+            <li class="navbar_li">
+                 <a class="navbar_a" href="https://www.nationalparks.uk/" target="_blank" >Home</a> | </li>
+            <li class="navbar_li"> 
+                <a class="navbar_a" href="https://www.nationalparks.uk/parks/" target="_blank">Your National Park</a> | </li>
+            <li class="navbar_li"> 
+                <a class="navbar_a" href="https://www.nationalparks.uk/green-space-dark-skies/" target="_blank">Green Space</a> </li>
+        </ul>
+        <p id="footertext"> Copyright &copy; 2022 Prity Kumari</p>
+
+    </div>
+
+</body>
+</html>
