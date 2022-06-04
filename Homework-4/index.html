@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Form</title>
+
+    <style>
+        body {
+            color: black;
+            background-image: url(background22.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 25px;
+            margin-left: 20%;
+            margin-right: 15%;
+        }
+
+        #mainHeader {
+            display: flex;
+            align-items: center;
+        }
+
+        #myForm {
+            text-align: center;
+            padding-top: 35px;
+            background-color: whitesmoke;
+            border-color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header id="mainHeader">
+        <h1>Order and Validation form</h1>
+        <img src="flowerlogo1.jpg" width="30px" height="30px">
+        <br>
+    </header>
+    <p> Welcome to Mon Komo Hotel's, Cabana Bar-Kitchen-Garden area. <br>
+        Please fill in the below information, alternatively a manual sign-in sheet can be provided to you.
+    </p><br><br>
+
+
+    <h2>Customer Details</h2>
+    <br>
+
+    <div id="main">
+        <!-- form 
+    <form id="myForm" method="GET" action="details.html">
+    -->
+        <form id="myForm">
+
+            <label for="fName">First Name*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="fName" id="fName" placeholder="John" pattern="[A-Za-z]{1,20}"  required>
+            <br><br>
+
+            <label for="lName">Last Name*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="lName" id="lName" placeholder="Smith" pattern="[A-Za-z]{1,20}" required>
+            <br><br>
+
+            <label for="email">Email Address*</label>
+            <input type="email" name="email" id="email" placeholder="john5@gmail.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <br><br>
+
+            <label for="phone">Phone Number*</label>
+            <input type="number" name="phone" id="phone" placeholder="0123456789" pattern="[[0-9]{9}]" required>
+            <br><br>
+
+            <label for="cName">City (Optional)</label>&nbsp;&nbsp;
+            <input type="text" name="cName" id="cName" placeholder="Your city name" pattern="[A-Za-z]{1,20}">
+            <br><br>
+
+            <label for="street">
+                Street*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="street" id="street" placeholder="1st address line" required>
+            <br><br>
+
+            <label for="postCode"> Postcode*</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="postCode" id="postCode" placeholder="SE6 2LV" required>
+            <br><br>
+
+            <label for="">Country*</label>&nbsp;&nbsp;
+            <br>
+
+            <select name="country" id="country" required><br>
+                <option value="uk">UK</option>
+                <option value="france">France</option>
+                <option value="spain">Spain</option>
+                <option value="india">India</option>
+            </select>
+            <br><br>
+
+            <label for="note">Note (Optional)</label><br>
+            <textarea name="note" id="note" rows="5" cols="50" maxlength="250"
+                placeholder="Enter your note here (limited to 250 characters)">
+            </textarea>
+            <br><br>
+
+            <button type="button" onclick="validateCustomerDetails()"> Submit </button>
+                
+
+
+            <br>
+            <!-- javascript -->
+
+            <script>
+
+                /*
+                var form = document.getElementById("myForm");
+                function handleForm(event) { event.preventDefault(); }
+                form.addEventListener('submit', handleForm);
+                */
+
+                function validateCustomerDetails() {
+
+                    var fName = document.getElementById("fName").value;
+                    var lName = document.getElementById("lName").value;
+                    var fullName = fName + " " + lName;
+
+                    var email = document.getElementById("email").value;
+
+
+                    var phone = document.getElementById("phone").value;
+
+
+
+                    var street = document.getElementById("street").value;
+                    var postCode = document.getElementById("postCode").value;
+                    var cName = document.getElementById("cName").value;
+                    var country = document.getElementById("country").value;
+                    var fullAddress = street + ", " + postCode + ", " + cName + ", " + country;
+
+                    var note = document.getElementById("note").value;
+
+                    var fNameCheckPattern = /^[a-zA-Z]+$/;
+                    var lNameCheckPattern = /^[a-zA-Z]+$/;
+                    var phoneCheckPattern = /[0-9]{9}/;
+                    var cNameCheckPattern = /^[a-zA-Z]+$/;
+                    var emailCheckPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+
+                    if (!fNameCheckPattern.test(fName)) { document.getElementById("fName").focus(); alert("Only characters are allowed."); }
+
+                    else if (!lNameCheckPattern.test(lName)) { document.getElementById("lName").focus(); alert("Only characters are allowed."); }
+
+                    else if (!phoneCheckPattern.test(phone)) { document.getElementById("phone").focus(); alert("Only digits are allowed. Example of format: 0132465798"); }
+
+                    else if (!emailCheckPattern.test(email)) { document.getElementById("email").focus(); alert("Input correct email. Example: John.smith@email.com"); }
+
+                    else {
+
+                        document.getElementById("fullName").innerHTML = "<b>Full Name:</b> " + fullName;
+                        document.getElementById("emailAddress").innerHTML = "<b>Email Address:</b> " + email;
+                        document.getElementById("phoneNumber").innerHTML = "<b>Phone Number:</b>" + phone;
+                        document.getElementById("fullAddress").innerHTML = "<b>Address:</b>" + fullAddress
+                        document.getElementById("fullNote").innerHTML = "<b>Note:</b>" + note;
+
+                    }
+
+                }
+
+
+
+            </script>
+        </form>
+
+        <!-- output -->
+        <div>
+            <h2>Your display output</h2>
+            <h3>Customer Details</h3>
+
+            <p  id="fullName">Full Name:</p>
+            <p  id="emailAddress">Email Address:</p>
+            <p  id="phoneNumber">Phone Number:</p>
+            <p  id="fullAddress">Address:</p>
+            <p  id="fullNote">Note:</p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
